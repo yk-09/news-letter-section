@@ -12,6 +12,12 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/favicon.ico" sizes="any" />
+
+    <style>
+      .newsletter-subscription{
+        display: flex;
+      }
+    </style>
   </head>
   <body>
     <!-- semantic html for the page -->
@@ -33,12 +39,22 @@
           </ul>
           <form action="#">
             <label for="user-email">Enter email</label>
-            <input id="user-email" type="email" placeholder="enter your email" required pattern="^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)+edu$" title="user123@example.com">
-            <button type="submit">Subscribe</button>
+            <input 
+              class="js-user-email" 
+              id="user-email" 
+              type="email" 
+              placeholder="enter your email" 
+              required 
+              title="Please enter a valid email address (e.g., name@domain.com)"
+            >
+            <button type="submit" class="js-subscribe">Subscribe</button>
+            <p>
+              We only send you the best! No spam.
+            </p>
           </form>
         </section>
         <figure class="hero-image-container">
-          <img src="img/abstract.jpg" alt="abstract">
+          <img src="img/abstract.jpg" alt="abstract" width="400">
         </figure>
      </section>
 
