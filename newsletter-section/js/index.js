@@ -23,3 +23,22 @@ subscribeButtonElem.addEventListener('click', () => {
     document.querySelector('.js-user-email').value = '';
   }
 });
+
+async function subscribe(email){
+  const response = await fetch('https://69ac8ee99ca639a5217f2c66.mockapi.io/subscribers', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email,
+    })
+  });
+
+  if(response.ok){
+    alert('congo! your sub is successfull. Please check your email.');
+
+  }else{
+    alert(`sorry blud! but theres a problem ${response.status}`);
+  }
+}
