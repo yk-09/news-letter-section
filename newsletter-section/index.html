@@ -12,51 +12,63 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/favicon.ico" sizes="any" />
-
-    <style>
-      .newsletter-subscription{
-        display: flex;
-      }
     </style>
   </head>
   <body>
     <!-- semantic html for the page -->
-     <section class="newsletter-subscription">
-        <section class="subscription">
-          <h1>
+    <section class="newsletter-card">
+      <div class="request-status is-error"> <span class="status-badge">Error</span>
+        <span class="status-message">Failed to subscribe. Please ensure your email is correct or try again later.</span>
+      </div>
+      <div class="newsletter-content">
+        <header class="newsletter-header">
+          <h1 class="newsletter-title">
             Get the finest curated abstracts delivered weekly to your inbox
           </h1>
-          <ul class="subbing-pros">
-            <li>
-              Exclusive access to new abstract images and collections
-            </li>
-            <li>
-              Unlock special promotions only or subscribers
-            </li>
-            <li>
-              regular doses for artistic inspiration
-            </li>
-          </ul>
-          <form action="#">
-            <label for="user-email">Enter email</label>
-            <input 
-              class="js-user-email" 
-              id="user-email" 
-              type="email" 
-              placeholder="enter your email" 
-              required 
-              title="Please enter a valid email address (e.g., name@domain.com)"
+        </header>
+
+        <ul class="newsletter-features">
+          <li class="feature-item">
+            <span class="icon-check"></span>
+            Exclusive access to new abstract images and collections
+          </li>
+          <li class="feature-item">
+            <span class="icon-check"></span>
+            Unlock special promotions only for subscribers
+          </li>
+          <li class="feature-item">
+            <span class="icon-check"></span>
+            Regular doses of artistic inspiration
+          </li>
+        </ul>
+
+        <form class="newsletter-form" action="#">
+          <div class="input-group">
+            <label for="user-email" class="visually-hidden"
+              >Enter your email</label
             >
-            <button type="submit" class="js-subscribe">Subscribe</button>
-            <p>
-              We only send you the best! No spam.
-            </p>
-          </form>
-        </section>
-        <figure class="hero-image-container">
-          <img src="img/abstract.jpg" alt="abstract" width="400">
-        </figure>
-     </section>
+            <input
+              id="user-email"
+              type="email"
+              placeholder="Enter your email"
+              required
+              class="email-input"
+            />
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </div>
+          <p class="spam-disclaimer">
+            We only send you the best! No spam.
+          </p>
+        </form>
+      </div>
+
+      <figure class="newsletter-image">
+        <img
+          src="img/abstract.jpg"
+          alt="Stacked abstract art previews in gold and monochrome"
+        />
+      </figure>
+    </section>
 
     <!-- Attribute this challenge to yourself! -->
     <div class="credits">
