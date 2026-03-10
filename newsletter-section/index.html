@@ -17,8 +17,8 @@
   <body>
     <!-- semantic html for the page -->
     <section class="newsletter-card">
-      <div class="request-status is-error"> <span class="status-badge">Error</span>
-        <span class="status-message">Failed to subscribe. Please ensure your email is correct or try again later.</span>
+      <div class="request-status js-request-status"> <span class="status-badge js-status-badge"></span>
+        <span class="status-message js-status-message"></span>
       </div>
       <div class="newsletter-content">
         <header class="newsletter-header">
@@ -52,9 +52,9 @@
               type="email"
               placeholder="Enter your email"
               required
-              class="email-input"
+              class="email-input js-email-input"
             />
-            <button type="submit" class="btn-subscribe">Subscribe</button>
+            <button type="submit" class="btn-subscribe js-btn-subscribe">Subscribe</button>
           </div>
           <p class="spam-disclaimer">
             We only send you the best! No spam.
